@@ -1,0 +1,119 @@
+# ══════════════════════════════════════════════════════════════════
+#  story.yaml
+# ══════════════════════════════════════════════════════════════════
+
+page1:
+  title: "The Tooth Loop <span class='ei'>🦷</span>"
+  heading: "<span class='ei'>🛸</span> <em>{name}</em> Wants to Learn to Brush!"
+  paragraphs:
+    - "You are brushing your teeth and want to teach the <em>baby alien</em> to do the same thing. You wonder, \"What if I teach the <em>baby alien</em> about brushing one tooth from the gum to the bottom of the tooth? Can it then brush the rest of its teeth following my instruction? How will it know which teeth it has brushed?\""
+    - "The <em>baby alien</em> has only 8 teeth, four on top and four on bottom. If it starts brushing without any followable pattern then it will never know which teeth it brushed."
+    - "You wonder, \"Can I teach it to do a proper brushing for one tooth and then it repeats it for all until every tooth is brushed?\" This is called a <b>for-loop</b> in computer programming. Why a <b>for-loop</b>? Because you repeat the same thing <b>for</b> as many times as necessary."
+  name_label: "✏️ Give your alien a name:"
+  name_placeholder: "e.g. Zorp, Pip, Nova…"
+  name_greeting: "👾 Hello, <em>{name}</em>! Let's loop through those teeth!"
+  next_button: "Start the lesson! 🦷"
+
+page2:
+  heading: "<b>First</b>, Let's Think It Through…"
+  intro: "<em>{name}</em> has 8 teeth — 4 on top, 4 on the bottom. Before writing any rules, let's think about <em>why</em> rules matter at all."
+  q1:
+    number: "Question 1"
+    statement: "<em>{name}</em> decides to brush randomly — no plan, just moving the brush wherever feels right. It finishes and thinks: <em>\"I must have covered every tooth by now.\"</em> Is that a safe assumption?"
+    options:
+      yes:
+        label: "✅ Yes — random is fine!"
+        why: "Think again! Without a plan, <em>{name}</em> could brush the same tooth five times and completely skip another. There is nothing keeping track."
+      no:
+        label: "❌ No — it could miss teeth!"
+        why: "Correct! Without a rule, <em>{name}</em> has no way of knowing which teeth it already brushed. Some could stay dirty forever!"
+    correct: "no"
+    feedback_correct: "Right! Random brushing offers no guarantee. <em>{name}</em> could circle back to the same tooth again and again while another stays dirty. Without a rule, there is simply no way to be sure."
+    feedback_wrong: "Think carefully: if <em>{name}</em> just moves the brush wherever feels right, what stops it from brushing the same tooth twice while completely missing another? Nothing is keeping track!"
+  q2:
+    number: "Question 2"
+    statement: "If <em>{name}</em> follows a clear rule — for example: <em>\"start top-left, go right, then bottom-left, go right\"</em> — it can guarantee every tooth is brushed exactly once."
+    options:
+      yes:
+        label: "✅ True — rules guarantee it!"
+        why: "Correct! A clear rule tells <em>{name}</em> exactly where to go next. No tooth gets skipped, no tooth gets brushed twice."
+      no:
+        label: "❌ False — rules don't help"
+        why: "Actually, rules help a lot! Any rule that visits every tooth exactly once is a complete guarantee — no tooth left behind."
+    correct: "yes"
+    feedback_correct: "Exactly! A rule is a guarantee. \"Left to right, top then bottom\" — if <em>{name}</em> follows it completely, every single tooth gets covered. That is what <b>algorithms</b> do: they remove uncertainty."
+    feedback_wrong: "Think of it like a shopping list in <b>order</b>. If you follow the list from top to bottom, you are guaranteed to get every item. A tooth-brushing rule works the same way!"
+  next_button: "I'm convinced — show me the methods! →"
+
+page3:
+  heading: "Which Method Guarantees Clean Teeth?"
+  subtitle: "Both methods below follow a rule. Does it matter <em>which</em> rule <em>{name}</em> picks, or does any complete rule work?"
+  options:
+    row_order:
+      label: "Row by Row"
+      desc: "Top row left→right: T1, T2, T3, T4. Then bottom row left→right: B1, B2, B3, B4."
+      why: "This works! A left-to-right scan of each row covers every tooth exactly once."
+    numbered:
+      label: "By the Numbers"
+      desc: "Take a photo of the <em>baby alien</em>'s teeth, write a unique number 1–8 on each tooth (any <b>order</b>) on the photo. Brush #1, then #2, up to #8."
+      why: "This also works! Following unique numbers 1→8 guarantees every tooth is covered."
+    both:
+      label: "Both work! ✓"
+      desc: "Any rule that visits every tooth exactly once — in any <b>order</b> — guarantees a full clean."
+      why: "Correct! The method doesn't matter. What matters is that the rule visits every item exactly once."
+  correct: "both"
+  feedback_correct: "Exactly right! Both are valid <b>algorithms</b>. The key insight is not <em>which</em> <b>order</b> you use — it is that the rule must visit every item in the collection. In programming, we call this a <b>for-loop</b>: repeat an action <b>for</b> each item in a list, making sure no item is ever skipped."
+  feedback_wrong: "Think about it: if <em>{name}</em> follows either rule perfectly and completely, can it ever miss a tooth? Can it ever brush a tooth twice? If both guarantee full coverage, maybe both are valid…"
+  next_button: "Time to practice clicking teeth! 🦷"
+
+page4:
+  heading: "<span class='ei'>🦷</span> Practice Time — Follow the Rule!"
+  intro: "Click the teeth in exactly the <b>order</b> the rule describes. Use the hint button if you get stuck — it will highlight the next tooth to click in yellow."
+  rounds:
+    row_order:
+      badge: "Round 1 of 4"
+      title: "Row by Row"
+      instruction: "Start at the top row, click from left to right: T1 → T2 → T3 → T4. Then move to the bottom row and again click left to right: B1 → B2 → B3 → B4."
+      success: "🎉 Perfect! <em>{name}</em> brushed all 8 teeth by going left-to-right, row by row. This is a classic <b>for-loop</b> — visiting every item in a neat, predictable <b>order</b>!"
+    numbered_asc:
+      badge: "Round 2 of 4"
+      title: "By the Numbers (1 → 8)"
+      instruction: "Each tooth has been given a random number between 1 and 8 — no two teeth share a number. Find the tooth marked #1 and click it <b>first</b>. Then #2, then #3 — keep going until you reach #8."
+      success: "🔢 Brilliant! <em>{name}</em> followed the numbers 1→8 and brushed every tooth. The numbers act like an index — a way to label every item in a list so you can visit them all in <b>order</b>!"
+    zigzag:
+      badge: "Round 3 of 4"
+      title: "The Zigzag Rule"
+      instruction: "This rule zigzags between rows — unusual, but complete! Follow this exact <b>order</b>: Top row right side: T4 → T3. Then Bottom row left side: B1 → B2. Then Top row left side: T2 → T1. Finally Bottom row right side: B3 → B4."
+      success: "🌟 Incredible! Even this unusual zigzag covered all 8 teeth — because the rule was complete. In computer science, any loop that visits every item exactly once is valid, no matter the <b>order</b>!"
+    numbered_desc:
+      badge: "Round 4 of 4"
+      title: "By the Numbers (8 → 1)"
+      instruction: "New random numbers — all different again! But this time start from the tooth marked #8 and count downwards: 8 → 7 → 6 → … all the way to #1. A reversed loop is still a valid loop!"
+      success: "⬇️ Excellent! Counting backwards from 8 to 1 still covered every tooth. The direction of a loop — forwards or backwards — doesn't matter, as long as every item is visited exactly once!"
+  hint_on:  "💡 Show hint"
+  hint_off: "💡 Hide hint"
+  reset:    "↺ Restart round"
+  step_label: "{done} / {total} teeth brushed"
+  all_done: "🦷✨ All 8 teeth clean!"
+  next_round: "Next Round →"
+  finish: "See the big lesson! 🎓"
+
+page5:
+  heading: "<span class='ei'>🎓</span> <em>{name}</em> Learned About For-Loops!"
+  intro_heading: "The Big Idea"
+  paragraphs:
+    - "A <b>for-loop</b> is an instruction that says: <em>\"for each item in a collection, do this action.\"</em> What <em>{name}</em> just practiced was exactly that — <b>for</b> each tooth in the mouth, brush it."
+    - "The loop does not care about the <b>order</b> — left-to-right, by number, zigzag, or even backwards — as long as the rule visits every item exactly once and stops when all items are done, it is a valid <b>for-loop</b>. The guarantee of completeness is what makes it powerful."
+    - "In real programs, a <b>for-loop</b> might say: <b>for</b> each photo in your camera roll, apply a filter. Or: <b>for</b> each student in the class list, send an email. The shape is always the same — a collection, one action, every item visited."
+  pseudocode_intro: "In a programming language, what <em>{name}</em> did looks like this:"
+  pc_c1: "# Method 1 — left to right, row by row"
+  pc_l1: "teeth = [T1, T2, T3, T4, B1, B2, B3, B4]"
+  pc_c2: "# Method 2 — numbered (any order, all 8 present)"
+  pc_l2: "teeth = [T3, B2, T1, B4, T4, B1, T2, B3]  # shuffled but complete"
+  ingredients_heading: "Every <b>for-loop</b> has exactly three ingredients:"
+  ingredients:
+    - "📋 A collection — the list of things to process (our 8 teeth)"
+    - "🔁 An action — what to do to each one (brush it)"
+    - "✅ A stopping condition — when every item has been visited, the loop ends automatically"
+  math_note: "In maths, the <b>for-loop</b> idea appears as the Sigma (Σ) symbol, which means 'add this up <b>for</b> every value from 1 to n'. The loop structure is one of the most universal ideas across all of mathematics and computer science."
+  restart_btn: "🔄 Start the adventure again!"
