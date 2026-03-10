@@ -4,7 +4,7 @@
 
 page1:
   title: "Die Zahn-Schleife <span class='ei'>🦷</span>"
-  heading: "<span class='ei'>🛸</span> <em>{name}</em> möchte Zähneputzen lernen!"
+  heading: "<span class='ei'>🛸</span> Das <em>Alien-Baby</em> möchte Zähneputzen lernen!"
   paragraphs:
     - "Du putzt dir gerade die Zähne und möchtest dem <em>Alien-Baby</em> beibringen, das Gleiche zu tun. Du fragst dich: \"Was ist, wenn ich dem <em>Alien-Baby</em> beibringe, wie man einen Zahn vom Zahnfleisch bis zur Spitze putzt? Kann es dann die restlichen Zähne nach meiner Anleitung putzen? Woher weiß es, welche Zähne es schon geputzt hat?\""
     - "Das <em>Alien-Baby</em> hat nur 8 Zähne, vier oben und vier unten. Wenn es ohne ein erkennbares Muster anfängt zu putzen, wird es nie wissen, welche Zähne es schon geputzt hat."
@@ -58,7 +58,7 @@ page3:
       desc: "Mache ein Foto von den Zähnen des <em>Alien-Babys</em>, schreibe eine eindeutige Zahl von 1-8 auf jeden Zahn (in beliebiger <b>Reihenfolge</b>) auf dem Foto. Putze #1, dann #2, bis #8."
       why: "Das funktioniert auch! Den eindeutigen Zahlen 1→8 zu folgen, garantiert, dass jeder Zahn abgedeckt wird."
     both:
-      label: "Beide funktionieren! ✓"
+      label: "Beide funktionieren!"
       desc: "Jede Regel, die jeden Zahn genau einmal besucht — in beliebiger <b>Reihenfolge</b> — garantiert eine komplette Reinigung."
       why: "Richtig! Die Methode spielt keine Rolle. Wichtig ist nur, dass die Regel jedes Element genau einmal besucht."
   correct: "both"
@@ -99,12 +99,12 @@ page4:
   finish: "Schau dir die große Lektion an! 🎓"
 
 page5:
-  heading: "<span class='ei'>🎓</span> <em>{name}</em> hat For-Schleifen gelernt!"
+  heading: "<span class='ei'>🎓</span> <em>{name}</em> hat \"For-Schleifen\" gelernt!"
   intro_heading: "Die große Idee"
   paragraphs:
-    - "Eine <b>For-Schleife</b> ist eine Anweisung, die besagt: <em>\"Für jedes Element in einer Sammlung, mache diese Aktion.\"</em> Was <em>{name}</em> gerade geübt hat, war genau das — <b>für</b> jeden Zahn im Mund, putze ihn."
+    - "Eine <b>For-Schleife</b> ist eine Anweisung, die besagt: <em>\"Für jedes Element in einer Sammlung, mache diese Aktion.\"</em> Was <em>{name}</em> gerade geübt hat, war genau das — <b>für jeden</b> Zahn im Mund, putze ihn."
     - "Der Schleife ist die <b>Reihenfolge</b> egal — von links nach rechts, nach Zahlen, Zickzack oder sogar rückwärts — solange die Regel jedes Element genau einmal besucht und aufhört, wenn alle Elemente erledigt sind, ist es eine gültige <b>For-Schleife</b>. Die Garantie der Vollständigkeit macht sie so mächtig."
-    - "In echten Programmen könnte eine <b>For-Schleife</b> sagen: <b>Für</b> jedes Foto auf deinem Handy, wende einen Filter an. Oder: <b>Für</b> jeden Schüler in der Klassenliste, sende eine E-Mail. Der Ablauf ist immer derselbe — eine Sammlung, eine Aktion, jedes Element wird besucht."
+    - "In echten Programmen könnte eine <b>For-Schleife</b> sagen: <b>Für jedes</b> Foto auf deinem Handy, wende einen Filter an. Oder: <b>Für jeden</b> Schüler in der Klassenliste, sende eine E-Mail. Der Ablauf ist immer derselbe — eine Sammlung, eine Aktion, jedes Element wird besucht."
   pseudocode_intro: "In einer Programmiersprache sieht das, was <em>{name}</em> gemacht hat, so aus:"
   pc_c1: "# Methode 1 — von links nach rechts, Reihe für Reihe"
   pc_l1: "teeth = [T1, T2, T3, T4, B1, B2, B3, B4]"
@@ -115,5 +115,5 @@ page5:
     - "📋 Eine Sammlung — die Liste der Dinge, die bearbeitet werden sollen (unsere 8 Zähne)"
     - "🔁 Eine Aktion — was mit jedem Element gemacht werden soll (putzen)"
     - "✅ Eine Stopp-Bedingung — wenn jedes Element besucht wurde, endet die Schleife automatisch"
-  math_note: "In der Mathematik taucht die Idee der <b>For-Schleife</b> als Sigma-Symbol (Σ) auf, was bedeutet: 'Addiere das <b>für</b> jeden Wert von 1 bis n'. Die Schleifenstruktur ist eine der universellsten Ideen in der Mathematik und Informatik."
+  math_note: "In der Mathematik funktioniert das Sigma-Symbol (Σ) fast genauso wie eine <b>For-Schleife</b>! Es bedeutet: 'Addiere das <b>für</b> jeden Wert von 1 bis n'. Die Schleifenstruktur ist eine der universellsten Ideen in der Mathematik und Informatik."
   restart_btn: "🔄 Starte das Abenteuer noch einmal!"
