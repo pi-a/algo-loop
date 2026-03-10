@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🛸 Adventures of an Alien Baby The Tooth Loop - How to Brush Teeth?</title>
+  <title>🛸 Abenteuer eines Alien-Babys - Wie putzt man Zähne?</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════════════════
@@ -199,6 +199,12 @@
 
     ::-webkit-scrollbar{width:5px;} ::-webkit-scrollbar-track{background:var(--bg);} ::-webkit-scrollbar-thumb{background:var(--surface3);border-radius:3px;}
     @media print{#star-canvas,#progress-wrap,.nav,.btn,.round-controls{display:none!important;}body{background:white;color:black;}.card{box-shadow:none;border:1px solid #ccc;}}
+	
+		.ei {
+  -webkit-text-fill-color: initial;
+  background: none;
+  font-style: normal;
+}
   </style>
 </head>
 <body>
@@ -226,7 +232,7 @@ page1:
     - "You wonder, \"Can I teach it to do a proper brushing for one tooth and then it repeats it for all until every tooth is brushed?\" This is called a <b>for-loop</b> in computer programming. Why a <b>for-loop</b>? Because you repeat the same thing <b>for</b> as many times as necessary."
   name_label: "✏️ Give your alien a name:"
   name_placeholder: "e.g. Zorp, Pip, Nova…"
-  name_greeting: "👾 Hello, <em>{name}</em>! Let's loop through those teeth!"
+  name_greeting: "👾 Hello, {name}! Let's loop through those teeth!"
   next_button: "Start the lesson! 🦷"
 
 page2:
@@ -288,7 +294,7 @@ page4:
     row_order:
       badge: "Round 1 of 4"
       title: "Row by Row"
-      instruction: "Start at the top row, click from left to right: T1 → T2 → T3 → T4. Then move to the bottom row and again click left to right: B1 → B2 → B3 → B4."
+      instruction: "Start at the <b>top row</b>, click from <em>left to right</em>: T1 → T2 → T3 → T4. Then move to the <b>bottom row</b> and again click <em>left to right</em>: B1 → B2 → B3 → B4."
       success: "🎉 Perfect! <em>{name}</em> brushed all 8 teeth by going left-to-right, row by row. This is a classic <b>for-loop</b> — visiting every item in a neat, predictable <b>order</b>!"
     numbered_asc:
       badge: "Round 2 of 4"
@@ -298,13 +304,13 @@ page4:
     zigzag:
       badge: "Round 3 of 4"
       title: "The Zigzag Rule"
-      instruction: "This rule zigzags between rows — unusual, but complete! Follow this exact <b>order</b>: Top row right side: T4 → T3. Then Bottom row left side: B1 → B2. Then Top row left side: T2 → T1. Finally Bottom row right side: B3 → B4."
-      success: "🌟 Incredible! Even this unusual zigzag covered all 8 teeth — because the rule was complete. In computer science, any loop that visits every item exactly once is valid, no matter the <b>order</b>!"
+      instruction: "This rule zigzags between rows — unusual, but complete! Follow this exact order: <em>Top row right side:</em> T4 → T3. Then <em>Bottom row left side:</em> B1 → B2. Then <em>Top row left side:</em> T2 → T1. Finally <em>Bottom row right side:</em> B3 → B4."
+      success: "🌟 Incredible! Even this unusual zigzag covered all 8 teeth — because the rule was <b>complete</b>. In computer science, any loop that visits every item exactly once is valid, no matter the <b>order</b>!"
     numbered_desc:
       badge: "Round 4 of 4"
       title: "By the Numbers (8 → 1)"
-      instruction: "New random numbers — all different again! But this time start from the tooth marked #8 and count downwards: 8 → 7 → 6 → … all the way to #1. A reversed loop is still a valid loop!"
-      success: "⬇️ Excellent! Counting backwards from 8 to 1 still covered every tooth. The direction of a loop — forwards or backwards — doesn't matter, as long as every item is visited exactly once!"
+      instruction: "New random numbers — all different again! But this time start from the tooth marked <b>#8</b> and count <em>downwards</em>: 8 → 7 → 6 → … all the way to <b>#1</b>. A reversed loop is still a valid loop!"
+      success: "⬇️ Excellent! Counting backwards from 8 to 1 still covered every tooth. The direction of a loop — forwards or backwards — doesn't matter, as long as <b>every item</b> is visited <b>exactly once</b>!"
   hint_on:  "💡 Show hint"
   hint_off: "💡 Hide hint"
   reset:    "↺ Restart round"
@@ -530,7 +536,7 @@ function goPage(n) {
 }
 
 function buildProgress() {
-  const labels=['Story','Think','Methods','Practice','Lesson'];
+  const labels=['Story','Denken','Methoden','Üben','Lektion'];
   const wrap=document.getElementById('progress-wrap');
   wrap.innerHTML='';
   for (let i=1;i<=5;i++) {
@@ -667,7 +673,7 @@ function renderP2() {
       ${qBlock('q2',p2.q2)}
     </div>
     <div class="nav">
-      <button class="btn btn-ghost" onclick="goPage(1)">← Back</button>
+      <button class="btn btn-ghost" onclick="goPage(1)">← Zurück</button>
       <button class="btn btn-primary" id="pg2-next"
               onclick="goPage(3)" ${nextOk?'':'disabled'}>
         ${t('page2.next_button',nv)}
@@ -730,7 +736,7 @@ function renderP3() {
       ${fbHTML}
     </div>
     <div class="nav">
-      <button class="btn btn-ghost" onclick="goPage(2)">← Back</button>
+      <button class="btn btn-ghost" onclick="goPage(2)">← Zurück</button>
       <button class="btn btn-primary" ${p3.answered?'':'disabled'}
               onclick="initRound(0); goPage(4);">
         ${t('page3.next_button',nv)}
@@ -866,7 +872,7 @@ function renderP4() {
     </div>
 
     <div class="nav">
-      <button class="btn btn-ghost" onclick="${backAction}">← Back</button>
+      <button class="btn btn-ghost" onclick="${backAction}">← Zurück</button>
       <button class="btn btn-primary" id="pg4-fin"
               onclick="goPage(5)" disabled>
         ${t('page4.finish',nv)}
@@ -1068,14 +1074,14 @@ function renderP5() {
     </div>
 
     <div class="card" style="background:var(--surface2)">
-      <h4 style="margin-bottom:8px">🔢 The maths connection</h4>
+      <h4 style="margin-bottom:8px">🔢 Die Verbindung zur Mathematik</h4>
       <p class="story" style="font-size:.9rem;color:var(--text-dim)">
         ${t('page5.math_note',nv)}
       </p>
     </div>
 
     <div class="nav">
-      <button class="btn btn-ghost" onclick="goPage(4)">← Back</button>
+      <button class="btn btn-ghost" onclick="goPage(4)">← Zurück</button>
       <button class="btn btn-primary" onclick="restartAll()">
         ${t('page5.restart_btn',nv)}
       </button>
